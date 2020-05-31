@@ -9,8 +9,8 @@ spec:
       - name: kaniko
         image: gcr.io/kaniko-project/executor:latest
         args: ["--dockerfile=Dockerfile",
-               "--context=git://github.com/reagul/Kaniko-FluxCD.git#refs/heads/master",
-               "--destination=ravij/kaniko:v3"]
+               "--context=git://github.com/GHUSER/GHREPO.git#refs/heads/master",
+               "--destination=<repo>/<tag>"]
         volumeMounts:
         - name: kaniko-secret
           mountPath: "/kaniko/.docker"
