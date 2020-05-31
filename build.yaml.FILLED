@@ -10,7 +10,7 @@ spec:
         image: gcr.io/kaniko-project/executor:latest
         args: ["--dockerfile=Dockerfile",
                "--context=git://github.com/somerepo.git#refs/heads/master",
-               "--destination=tourname/nginx:v3"]
+               "--destination=somename/nginx:v3"]
         volumeMounts:
         - name: kaniko-secret
           mountPath: "/kaniko/.docker"
@@ -22,3 +22,6 @@ spec:
           items:
           - key: .dockerconfigjson
             path: config.json
+
+
+kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=somename  --docker-password=somepass  --docker-email=somemail
