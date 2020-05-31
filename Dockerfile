@@ -1,3 +1,3 @@
 FROM nginx
-CMD ["sleep", "50"]
-RUN echo 'This is version v_x' > /usr/share/nginx/html/index.html
+
+RUN echo 'This is version v_3' > /usr/share/nginx/html/index.html
